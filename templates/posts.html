@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Winnerget.online Все статьи на сайте Посты
+{% endblock %}
+
+{% block ogtitle %}
+Winnerget.online Посты
+{% endblock %}
+
+
+{% block body%}
+	<body>
+    <div class="container">
+		<h1 class="text-center">Все статьи на сайте</h1>
+
+    {% if articles|length > 0 %}
+
+
+        {% for el in articles %}
+        <div class="alert aletr-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href="/posts/{{ el.id }}" class="btn btn-warning">Детально</a>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Еще нет ни одной статьи</p>
+    {% endif %}
+    </div>
+{% endblock %}
+

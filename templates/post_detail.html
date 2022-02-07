@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Winnerget.online - {{ article.title }}
+{% endblock %}
+
+{% block ogtitle %}
+{{ article.title }}
+{% endblock %}
+
+
+{% block body%}
+	<body>
+    <div class="container">
+		<h1 class="text-center">{{ article.title }}</h1>
+        <div class="alert aletr-info">
+            <p>{{ article.text }}</p>
+            <p><b>Дата: {{ article.date.date() }}</b></p>
+    <a href="/posts/{{ article.id }}/del" class="btn btn-danger">Удалить</a>
+    <a href="/posts/{{ article.id }}/update" class="btn btn-success">Редактировать</a>
+        </div>
+
+
+    </div>
+{% endblock %}
+

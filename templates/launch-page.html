@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Launch-page
+{% endblock %}
+
+{% block ogtitle %}
+Launch-page
+{% endblock %}
+
+
+{% block body%}
+	<body>
+    <div class="container">
+		<h1 class="text-center">Запустите скрипт</h1>
+        <form method="post">
+            <textarea name="log" id="log" cols="30" rows="10" value=""></textarea>
+          <input type="submit" class="btn btn-success" value="Отправить" id="toggle">
+        </form>
+
+
+    </div>
+{% endblock %}
+
